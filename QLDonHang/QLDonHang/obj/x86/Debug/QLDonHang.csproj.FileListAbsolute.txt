@@ -1,0 +1,28 @@
+D:\Visual Studio 2010\Projects\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.Form1.resources
+D:\Visual Studio 2010\Projects\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.Properties.Resources.resources
+D:\Visual Studio 2010\Projects\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.csproj.GenerateResource.Cache
+D:\Visual Studio 2010\Projects\QLDonHang\QLDonHang\bin\Debug\QLDonHang.exe.config
+D:\Visual Studio 2010\Projects\QLDonHang\QLDonHang\bin\Debug\QLDonHang.exe
+D:\Visual Studio 2010\Projects\QLDonHang\QLDonHang\bin\Debug\QLDonHang.pdb
+D:\Visual Studio 2010\Projects\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.exe
+D:\Visual Studio 2010\Projects\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.pdb
+D:\QLDonHang\QLDonHang\bin\Debug\QLDonHang.exe.config
+D:\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.exe
+D:\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.pdb
+D:\QLDonHang\QLDonHang\bin\Debug\QLDonHang.exe
+D:\QLDonHang\QLDonHang\bin\Debug\QLDonHang.pdb
+D:\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.Form1.resources
+D:\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.Properties.Resources.resources
+D:\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.csproj.GenerateResource.Cache
+D:\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.FCTDH.resources
+D:\LTCSDL\QLDonHang\QLDonHang\bin\Debug\QLDonHang.exe.config
+D:\LTCSDL\QLDonHang\QLDonHang\bin\Debug\QLDonHang.exe
+D:\LTCSDL\QLDonHang\QLDonHang\bin\Debug\QLDonHang.pdb
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.csprojAssemblyReference.cache
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.FCTDH.resources
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.Form1.resources
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.Properties.Resources.resources
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.csproj.GenerateResource.cache
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.csproj.CoreCompileInputs.cache
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.exe
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.pdb

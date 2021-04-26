@@ -1,8 +1,0 @@
-D:\NW\NW\bin\Debug\NW.exe
-D:\NW\NW\bin\Debug\NW.pdb
-D:\NW\NW\obj\x86\Debug\NW.Form1.resources
-D:\NW\NW\obj\x86\Debug\NW.Properties.Resources.resources
-D:\NW\NW\obj\x86\Debug\NW.csproj.GenerateResource.Cache
-D:\NW\NW\obj\x86\Debug\NW.exe
-D:\NW\NW\obj\x86\Debug\NW.pdb
-D:\NW\NW\bin\Debug\NW.exe.config
