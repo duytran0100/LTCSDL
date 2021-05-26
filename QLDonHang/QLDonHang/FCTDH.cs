@@ -44,5 +44,17 @@ namespace QLDonHang
                 txtSoLuong.Text = gVCTDH.Rows[e.RowIndex].Cells["Quantity"].Value.ToString();
             }
         }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void quảnLýSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FSanPham f = new FSanPham();
+            this.Hide();
+            f.ShowDialog();
+        }
     }
 }

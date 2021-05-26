@@ -9,10 +9,12 @@ namespace QLDonHang
     class BUSDonHang
     {
         DAODonHang da;
+        DAOSanPham ds;
 
         public BUSDonHang()
         {
             da = new DAODonHang();
+            ds = new DAOSanPham();
         }
 
         public void LayDSDonHang(DataGridView dg)
@@ -50,11 +52,24 @@ namespace QLDonHang
         {
             if (da.SuaDonHang(donHang))
             {
-                MessageBox.Show("Sua thanh cong");
+                MessageBox.Show("Sửa thành công");
             }
             else
             {
-                MessageBox.Show("Khong co ma don hang");
+                MessageBox.Show("Không có mã đơn hàng");
+            }
+        }
+
+        public void XoaDonHang(Order donHang)
+        {
+
+            if (da.XoaDonHang(donHang))
+            {
+                MessageBox.Show("Xóa thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại");
             }
         }
 
@@ -70,6 +85,26 @@ namespace QLDonHang
                 MessageBox.Show("Error!");
             }
         }
+
+        public Product HienThiThongTinSP(int maSP)
+        {
+            Product p = ds.LayThongTinSanPham(maSP);
+
+            return p;
+        }
+
+        public void DatHang(List<Order_Detail> dsSanPham)
+        {
+            if (da.ThemCTDH(dsSanPham))
+            {
+                MessageBox.Show("Đặt hàng thành công");
+            }
+            else
+            {
+                MessageBox.Show("Đặt hàng thất bại");
+            }
+        }
+
 
     }
 }

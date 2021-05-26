@@ -26,3 +26,6 @@ D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.csproj.GenerateResource.ca
 D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.csproj.CoreCompileInputs.cache
 D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.exe
 D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.pdb
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.FSanPham.resources
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.FDatHang.resources
+D:\LTCSDL\QLDonHang\QLDonHang\obj\x86\Debug\QLDonHang.FNhanVien.resources

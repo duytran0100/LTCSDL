@@ -68,6 +68,43 @@ namespace QLDonHang
             }
         }
 
+        public bool XoaDonHang(Order donHang)
+        {
+            try
+            {
+                List<Order_Detail> ds_CTDH = db.Order_Details.Where(f => f.OrderID == donHang.OrderID).ToList();
+                Order d = db.Orders.Where(f => f.OrderID == donHang.OrderID).Single();
+
+                db.Order_Details.DeleteAllOnSubmit(ds_CTDH);
+                db.Orders.DeleteOnSubmit(d);
+
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool ThemCTDH(List<Order_Detail> dsSanPham)
+        {
+            try
+            {
+                foreach(Order_Detail d in dsSanPham)
+                {
+                    db.Order_Details.InsertOnSubmit(d);
+                    db.SubmitChanges();
+                }
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public dynamic LayDSCTHD(int maDH)
         {
             dynamic ds = db.Order_Details.Where(f => f.OrderID == maDH)

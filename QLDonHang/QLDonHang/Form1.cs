@@ -62,21 +62,44 @@ namespace QLDonHang
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            return;
+            try
+            {
+                Order donHang = new Order();
+
+                donHang.OrderID = int.Parse(txtMaDH.Text);
+                donHang.OrderDate = dtpNgayDH.Value;
+                donHang.CustomerID = cbCustomer.SelectedValue.ToString();
+                donHang.EmployeeID = int.Parse(cbEmployee.SelectedValue.ToString());
+
+                bus.XoaDonHang(donHang);
+
+                CapNhatDSDH();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không có thông tin đơn hàng");
+            }
         }
 
         private void btSua_Click(object sender, EventArgs e)
         {
-            Order donHang = new Order();
+            try
+            {
+                Order donHang = new Order();
 
-            donHang.OrderID = int.Parse(txtMaDH.Text);
-            donHang.OrderDate = dtpNgayDH.Value;
-            donHang.CustomerID = cbCustomer.SelectedValue.ToString();
-            donHang.EmployeeID = int.Parse(cbEmployee.SelectedValue.ToString());
+                donHang.OrderID = int.Parse(txtMaDH.Text);
+                donHang.OrderDate = dtpNgayDH.Value;
+                donHang.CustomerID = cbCustomer.SelectedValue.ToString();
+                donHang.EmployeeID = int.Parse(cbEmployee.SelectedValue.ToString());
 
-            bus.SuaDonHang(donHang);
+                bus.SuaDonHang(donHang);
 
-            CapNhatDSDH();
+                CapNhatDSDH();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không có thông tin đơn hàng");
+            }
         }
 
         private void gVDH_DoubleClick(object sender, EventArgs e)
@@ -84,6 +107,32 @@ namespace QLDonHang
             FCTDH c = new FCTDH();
             c.maDH = int.Parse(gVDH.CurrentRow.Cells["OrderID"].Value.ToString());
             c.ShowDialog();
+        }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void quảnLýSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FSanPham f = new FSanPham();
+            this.Hide();
+            f.ShowDialog();
+        }
+
+        private void btThemCTDH_Click(object sender, EventArgs e)
+        {
+            FDatHang f = new FDatHang();
+            f.maDH = int.Parse(gVDH.CurrentRow.Cells["OrderID"].Value.ToString());
+            f.ShowDialog();
+        }
+
+        private void QLNVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FNhanVien f = new FNhanVien();
+            this.Hide();
+            f.ShowDialog();
         }
     }
 }
