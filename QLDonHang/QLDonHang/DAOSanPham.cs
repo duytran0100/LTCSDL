@@ -89,5 +89,21 @@ namespace QLDonHang
                 return false;
             }
         }
+
+        public bool XoaSanPham(int maSP)
+        {
+            try
+            {
+                Product p = db.Products.First(f => f.ProductID == maSP);
+
+                db.Products.DeleteOnSubmit(p);
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

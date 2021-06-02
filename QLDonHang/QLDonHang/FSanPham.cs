@@ -104,5 +104,13 @@ namespace QLDonHang
             this.Hide();
             f.ShowDialog();
         }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            int maSP = int.Parse(dGSP.CurrentRow.Cells["ProductID"].Value.ToString());
+
+            bus_SP.XoaSanPham(maSP);
+            CapNhatDSSanPham();
+        }
     }
 }

@@ -66,5 +66,17 @@ namespace QLDonHang
                 MessageBox.Show("Sửa thất bại");
             }
         }
+
+        public void XoaSanPham(int maSP)
+        {
+            if (da.XoaSanPham(maSP))
+            {
+                MessageBox.Show("Xóa thành công");
+            }
+            else
+            {
+                MessageBox.Show("Sản phẩm đang được tham chiếu, không thể xóa !!!");
+            }
+        }
     }
 }

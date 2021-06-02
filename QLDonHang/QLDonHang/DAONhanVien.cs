@@ -34,8 +34,9 @@ namespace QLDonHang
 
                 return true;
             }
-            catch 
+            catch (Exception ex)
             {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
                 return false;
             }
         }

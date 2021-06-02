@@ -94,9 +94,60 @@ namespace QLDonHang
                 foreach(Order_Detail d in dsSanPham)
                 {
                     db.Order_Details.InsertOnSubmit(d);
-                    db.SubmitChanges();
                 }
 
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool ThemCTDH(Order_Detail donHang)
+        {
+            try
+            {
+                db.Order_Details.InsertOnSubmit(donHang);
+
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool SuaCTDH(Order_Detail dh)
+        {
+            try
+            {
+                Order_Detail d = db.Order_Details
+                                    .First(f => f.OrderID == dh.OrderID && f.ProductID == dh.ProductID);
+
+                d.Quantity = dh.Quantity;
+
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool XoaCTDH(Order_Detail dh)
+        {
+            try
+            {
+                Order_Detail d = db.Order_Details
+                                    .First(f => f.OrderID == dh.OrderID && f.ProductID == dh.ProductID);
+
+                db.Order_Details.DeleteOnSubmit(d);
+
+                db.SubmitChanges();
                 return true;
             }
             catch

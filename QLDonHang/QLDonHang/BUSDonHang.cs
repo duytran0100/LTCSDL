@@ -105,6 +105,41 @@ namespace QLDonHang
             }
         }
 
+        public void ThemCTDH(Order_Detail donHang)
+        {
+            if (da.ThemCTDH(donHang))
+            {
+                MessageBox.Show("Thêm thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại");
+            }
+        }
+
+        public void SuaCTDH(Order_Detail donHang)
+        {
+            if (da.SuaCTDH(donHang))
+            {
+                MessageBox.Show("Sửa thành công");
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
+        }
+
+        public void XoaCTDH(Order_Detail donHang)
+        {
+            if (da.XoaCTDH(donHang))
+            {
+                MessageBox.Show("Xóa thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+        }
 
     }
 }

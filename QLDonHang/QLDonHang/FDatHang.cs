@@ -103,6 +103,8 @@ namespace QLDonHang
             if(e.RowIndex >= 0 && e.RowIndex < dGSP.Rows.Count - 1)
             {
                 cbTenSP.SelectedValue = int.Parse(dGSP.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+                numSoLuong.Value = decimal.Parse(dGSP.Rows[e.RowIndex].Cells["Quantity"].Value.ToString());
             }
         }
 
@@ -136,6 +138,7 @@ namespace QLDonHang
             try
             {
                 dGSP.Rows.Remove(dGSP.CurrentRow);
+
             }
             catch
             {
@@ -152,10 +155,10 @@ namespace QLDonHang
                 Order_Detail sanPham = new Order_Detail();
 
                 sanPham.OrderID = int.Parse(txtMaDH.Text);
-                sanPham.ProductID = int.Parse(cbTenSP.SelectedValue.ToString());
-                sanPham.UnitPrice = decimal.Parse(txtDonGia.Text);
-                sanPham.Quantity = short.Parse(numSoLuong.Value.ToString());
-                sanPham.Discount = int.Parse(txtGiamGia.Text);
+                sanPham.ProductID = int.Parse(item[0].ToString());
+                sanPham.UnitPrice = decimal.Parse(item[1].ToString());
+                sanPham.Quantity = short.Parse(item[2].ToString());
+                sanPham.Discount = int.Parse(item[3].ToString());
 
                 dsSanPham.Add(sanPham);
             }
@@ -163,11 +166,18 @@ namespace QLDonHang
             if(dsSanPham.Count > 0)
             {
                 busDH.DatHang(dsSanPham);
+
+                dtSanPham.Clear();
             }
             else
             {
                 MessageBox.Show("Danh sách đặt hàng rỗng");
             }
+        }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
